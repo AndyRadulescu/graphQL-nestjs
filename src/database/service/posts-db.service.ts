@@ -12,4 +12,11 @@ export class PostsDbService {
   public async findAllByAuthor(id: Author): Promise<PostsEntity[]> {
     return await this.postsRepo.find({ relations: [ 'author' ], where: { author: { id } } });
   }
+
+  public async updateContent(id: string, content: string) {
+    const post = await this.postsRepo.findOne({ where: { id } });
+    const newPost = new PostsEntity(post);
+    newPost.content = content;
+    return await this.postsRepo.save(newPost);
+  }
 }

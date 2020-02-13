@@ -17,3 +17,7 @@ type Query {
     author(id: String!): Author
 }
 
+type Mutation{
+    updateContent(id:String!,content:String!):Post
+}
+
