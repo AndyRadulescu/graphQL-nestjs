@@ -1,0 +1,15 @@
+version: "3"
+services:
+  db:
+    ports:
+      - '30002:5432'
+    environment:
+      - "POSTGRES_USER=andy"
+      - "POSTGRES_PASSWORD=root"
+      - "POSTGRES_DB=graphql"
+    restart: always
+    image: postgres:11.5-alpine
+    networks:
+      - lucy
+networks:
+  lucy:
