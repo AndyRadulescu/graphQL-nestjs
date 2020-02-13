@@ -7,10 +7,13 @@ type Author {
 
 type Post {
     id: String!
+    content:String!
     title: String!
     likes: Int
+    author: Author!
 }
 
 type Query {
     author(id: String!): Author
 }
+

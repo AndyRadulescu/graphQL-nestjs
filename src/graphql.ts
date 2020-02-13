@@ -14,8 +14,10 @@ export interface Author {
 
 export interface Post {
     id: string;
+    content: string;
     title: string;
     likes?: number;
+    author: Author;
 }
 
 export interface IQuery {

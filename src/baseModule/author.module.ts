@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { AuthorResolver } from '../author.resolver';
+import { AuthorResolver } from './author.resolver';
 import { DatabaseModule } from '../database/database.module';
 
 @Module({
